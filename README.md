@@ -2,6 +2,7 @@ Szabo Cristina-Andreea
 # E-book Reader
 The project is built around the ESP32-C6-WROOM-1-N8 microcontroller, which integrates Wi-Fi and Bluetooth Low Energy functionality. It is responsible for managing communication between the connected components, sensor data acquisition, and display handling.
 
+## Block diagram:
 ![Block Diagram:](./Images/diagram.png)
 ## BOM - Bill of materials
 
