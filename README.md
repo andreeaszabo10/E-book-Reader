@@ -6,7 +6,7 @@ The project (Openbook) is an E-book reader built around the ESP32-C6-WROOM-1-N8 
 ![Block Diagram:](./Images/diagram.png)
 ## BOM - Bill of materials
 
-## Hardware Description:
+## Hardware description:
 - ESP32-C6-WROOM-1-N8: The heart of the system, providing Wi-Fi and BLE capabilities for wireless communication.
 - BME688: An environmental and air quality sensor that measures temperature, humidity, pressure, and gas. It communicates with the ESP32 via the I²C protocol.
 - DS3231SN: A high-precision Real-Time Clock (RTC) module, connected via I²C for accurate timekeeping.
@@ -43,7 +43,7 @@ The project (Openbook) is an E-book reader built around the ESP32-C6-WROOM-1-N8 
 - IO22 – SCL: I2C Clock line used for synchronization of data transfer between the ESP32 and I²C devices.
 - IO23 – EPD_RST: E-Ink Display Reset pin used to initialize the display before any updates or during power-up.
 
-## Power Consumption:
+## Power consumption:
 The system is designed to operate efficiently, with attention to low power consumption. The E-Ink Display is a key contributor to low energy use, as it only requires power during updates. The ESP32-C6 is capable of entering deep sleep modes, significantly reducing power consumption when the system is idle. Additionally, the MAX17048 battery level monitor and the MCP73831 charging controller help in managing the battery's state of charge and ensuring efficient power use throughout the device's operation.
 
 By using SPI for fast data communication with peripherals and I²C for sensors, the system ensures high-performance data transfer while minimizing the number of active pins, which helps in keeping the overall power usage low.
