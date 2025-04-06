@@ -1,6 +1,6 @@
 Szabo Cristina-Andreea
 # E-book Reader
-The project is built around the ESP32-C6-WROOM-1-N8 microcontroller, which integrates Wi-Fi and Bluetooth Low Energy functionality. It is responsible for managing communication between the connected components, sensor data acquisition, and display handling.
+The project (Openbook) is an E-book reader built around the ESP32-C6-WROOM-1-N8 microcontroller, which integrates Wi-Fi and Bluetooth Low Energy functionality. It is responsible for managing communication between the connected components, sensor data acquisition, and display handling. It has a 7.5-inch e-paper display, USB-C charging, a Li-Po battery, and 3 buttons.
 
 ## Block diagram:
 ![Block Diagram:](./Images/diagram.png)
