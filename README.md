@@ -1,6 +1,6 @@
 Szabo Cristina-Andreea
 # E-book Reader
-The project (Openbook) is an E-book reader built around the ESP32-C6-WROOM-1-N8 microcontroller, which integrates Wi-Fi and Bluetooth Low Energy functionality. It is responsible for managing communication between the connected components, sensor data acquisition, and display handling. It has a 7.5-inch e-paper display, USB-C charging, a Li-Po battery, and 3 buttons.
+The project (Openbook) is an E-book reader built around the ESP32-C6-WROOM-1-N8 microcontroller, which integrates Wi-Fi and Bluetooth Low Energy functionality. It is responsible for managing communication between the connected components, sensor data acquisition, and display handling. The E-book reader has a 7.5-inch e-paper display, USB-C charging, a Li-Po battery, and 3 buttons.
 
 ## Block diagram:
 ![Block Diagram:](./Images/diagram.png)
@@ -95,9 +95,9 @@ The project (Openbook) is an E-book reader built around the ESP32-C6-WROOM-1-N8 
 | U5              | ESP32_WROVER_SPARKFUN-IC-POWER_MCP73831 | [Link](https://ro.mouser.com/ProductDetail/Microchip-Technology/MCP73831T-2ACI-OT?qs=yUQqVecv4qvbBQBGbHx0Mw%3D%3D) | [Datasheet](https://ro.mouser.com/datasheet/2/268/MCP73831_Family_Data_Sheet_DS20001984H-3441711.pdf) |
 
 ## Hardware description:
-- ESP32-C6-WROOM-1-N8: The heart of the system, providing Wi-Fi and BLE capabilities for wireless communication.
+- ESP32-C6-WROOM-1-N8: The most important part of the system, providing Wi-Fi and BLE capabilities for wireless communication.
 - BME688: An environmental and air quality sensor that measures temperature, humidity, pressure, and gas. It communicates with the ESP32 via the I2C protocol.
-- DS3231SN: A high-precision Real-Time Clock (RTC) module, connected via I2C for accurate timekeeping.
+- DS3231SN: A high-precision Real-Time Clock (RTC) module, connected via I2C.
 - MAX17048: A battery level monitor with I2C interface, used to provide the State of Charge (SOC) estimation for the battery.
 - SD Card Module: Provides local data storage, communicating with the ESP32 using the SPI protocol for faster read/write operations.
 - E-Ink Display: A low-power e-paper display with an SPI interface for minimal energy consumption. It includes the following control signals: EPD_CS, EPD_DC, EPD_RST, and EPD_BUSY.
@@ -130,8 +130,3 @@ The project (Openbook) is an E-book reader built around the ESP32-C6-WROOM-1-N8 
 - IO21 – SDA: I2C Data line used for communication with the RTC, BME688, and other I2C devices.
 - IO22 – SCL: I2C Clock line used for synchronization of data transfer between the ESP32 and I2C devices.
 - IO23 – EPD_RST: E-Ink Display Reset pin used to initialize the display before any updates or during power-up.
-
-## Power consumption:
-The system is designed to operate efficiently, with attention to low power consumption. The E-Ink Display is a key contributor to low energy use, as it only requires power during updates. The ESP32-C6 is capable of entering deep sleep modes, significantly reducing power consumption when the system is idle. Additionally, the MAX17048 battery level monitor and the MCP73831 charging controller help in managing the battery's state of charge and ensuring efficient power use throughout the device's operation.
-
-By using SPI for fast data communication with peripherals and I²C for sensors, the system ensures high-performance data transfer while minimizing the number of active pins, which helps in keeping the overall power usage low.
